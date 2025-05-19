@@ -91,7 +91,3 @@ The project uses a singleton pattern for game logic management and implements va
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Built with ❤️ by Syn3-MAMALAQUi
