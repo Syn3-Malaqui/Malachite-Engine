@@ -1,41 +1,97 @@
 # Malachite Engine
 
-**Malachite Engine** is a lightweight 2D game engine written in Java, built for simplicity and ease of development. It provides a basic framework for creating Java-based 2D games with structured game logic and rendering systems.
+A turn-based card battle game engine built in Java, featuring strategic combat mechanics and progressive difficulty scaling.
+
+## Overview
+
+Malachite Engine is a Java-based game engine that implements a strategic card battle system with unique mechanics including armor penetration, critical hits, and progressive enemy scaling. The engine provides a robust framework for creating engaging turn-based combat games.
 
 ## Features
 
-- Game loop with update and render cycle
-- Panel-based rendering using Java Swing
-- Frame rate management
-- Extendable game logic via `GameLogic` interface
-- Designed for educational and lightweight game projects
+- **Strategic Card System**: 
+  - Attack and Defense cards with unique mechanics
+  - Card randomization and prediction system
+  - Visual card animations and effects
 
-## Getting Started
+- **Combat Mechanics**:
+  - Critical hit system (1% player chance, 20% enemy chance)
+  - Defense penetration mechanics
+  - Armor system with scaling difficulty
+  - Damage and defense ranges with upgradeable stats
 
-### Prerequisites
+- **Enemy System**:
+  - Progressive difficulty scaling
+  - Enemy HP scaling (increases every 2 enemies)
+  - Damage scaling (increases every 3 enemies)
+  - Armor mechanics (introduced every 2 enemies)
+  - Armor penetration abilities
 
-- Java Development Kit (JDK) 8 or higher
-- A Java IDE (e.g. IntelliJ IDEA, Eclipse, or NetBeans)
+- **Visual Effects**:
+  - Card animations and transitions
+  - Damage display effects
+  - Screen shake effects
+  - Flash effects for critical hits
+  - Death screen animations
 
-### Installation
+## Game Mechanics
 
-1. Clone or download this repository.
-2. Include `GamePanel.java` and `GameLogic.java` in your project.
-3. Create your custom game class that implements `GameLogic`.
+### Core Stats
+- Initial Player HP: 10
+- Initial Player Defense: 5
+- Initial Enemy HP: 15
+- Damage Range: 3-5
+- Defense Range: 2-4
 
-## Usage
+### Special Mechanics
+- Critical Hits: 1% chance for player, 20% chance for enemy (1.5x damage)
+- Defense Penetration: 10% chance to ignore defense
+- No Defense Damage: 30% chance to deal damage even with defense
+- Next Card Prediction: 50% chance for attack card
 
-### 1. Implement the `GameLogic` Interface
+## Requirements
 
-```java
-public class MyGame implements GameLogic {
-    public void update() {
-        // Game logic updates go here
-    }
+- Java Runtime Environment (JRE) 8 or later
+- Java Development Kit (JDK) 8 or later for development
 
-    public void render(Graphics2D g) {
-        // Rendering code goes here
-        g.setColor(Color.BLUE);
-        g.fillRect(100, 100, 50, 50);
-    }
-}
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/malachite-engine.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd malachite-engine
+```
+
+3. Compile the project:
+```bash
+javac *.java
+```
+
+4. Run the game:
+```bash
+java MarrowExecutable
+```
+
+## Project Structure
+
+- `GamePanel.java`: Main game interface and rendering
+- `GameLogic.java`: Core game mechanics and state management
+- `MarrowExecutable.java`: Game entry point
+- `MenuPanel.java`: Main menu interface
+- `DrawingArea.java`: Drawing utilities
+- `sprites/`: Directory containing game assets
+
+## Development
+
+The project uses a singleton pattern for game logic management and implements various design patterns for maintainability and scalability. The codebase is structured to allow easy addition of new features and modifications to existing mechanics.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Built with ❤️ by Syn3-MAMALAQUi
